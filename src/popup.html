@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BullPrompt - Prompt Library</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1 class="title">BullPrompt</h1>
+        <p class="subtitle">Prompt Library</p>
+      </header>
+
+      <div class="search-section">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Search prompts..."
+          class="search-input"
+        />
+        <div class="tag-filters" id="tagFilters">
+          <!-- Dynamic tag filters will be populated here -->
+        </div>
+        <button id="clearFiltersBtn" class="btn btn-secondary btn-small hidden">
+          Clear Filters
+        </button>
+      </div>
+
+      <div class="actions">
+        <button id="addPromptBtn" class="btn btn-primary">+ Add Prompt</button>
+      </div>
+
+      <div class="prompts-section">
+        <div id="promptsList" class="prompts-list">
+          <!-- Prompts will be populated here -->
+        </div>
+        <div id="loadingState" class="loading-state hidden">
+          <div class="spinner"></div>
+          <p>Loading prompts...</p>
+        </div>
+        <div id="emptyState" class="empty-state hidden">
+          <p>No prompts found. Create your first prompt!</p>
+        </div>
+      </div>
+
+      <div id="addPromptModal" class="modal hidden">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 id="modalTitle">Add New Prompt</h2>
+            <button id="closeModal" class="close-btn">&times;</button>
+          </div>
+          <form id="promptForm" class="prompt-form">
+            <div id="errorMessage" class="error-message hidden"></div>
+            <div class="form-group">
+              <label for="promptName">Name</label>
+              <input
+                type="text"
+                id="promptName"
+                required
+                maxlength="100"
+                placeholder="Enter prompt name"
+              />
+            </div>
+            <div class="form-group">
+              <label for="promptTags">Tags (1-5 tags)</label>
+              <div class="tags-input">
+                <input
+                  type="text"
+                  id="promptTags"
+                  placeholder="Type and press Enter to add tags"
+                />
+                <div id="tagsContainer" class="tags-container"></div>
+              </div>
+              <small class="help-text"
+                >Press Enter to add a tag. Max 5 tags allowed.</small
+              >
+            </div>
+            <div class="form-group">
+              <label for="promptText">Prompt Text</label>
+              <textarea
+                id="promptText"
+                required
+                placeholder="Enter your prompt text here..."
+                rows="5"
+              ></textarea>
+            </div>
+            <div class="form-actions">
+              <button type="button" id="cancelBtn" class="btn btn-secondary">
+                Cancel
+              </button>
+              <button type="submit" id="saveBtn" class="btn btn-primary">
+                Save Prompt
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div id="notification" class="notification hidden">
+        <span id="notificationText"></span>
+      </div>
+    </div>
+
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>

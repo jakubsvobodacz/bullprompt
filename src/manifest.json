@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "BullPrompt - Prompt Library",
+  "version": "1.0.0",
+  "description": "Save, tag, search, and manage your text prompts with local storage",
+  "permissions": ["storage"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "BullPrompt"
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}

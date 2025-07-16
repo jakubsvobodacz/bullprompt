@@ -1,0 +1,30 @@
+{
+  "name": "bullprompt-chrome-extension",
+  "version": "1.0.0",
+  "description": "A Chrome extension for saving, tagging, searching, and managing text prompts with local storage",
+  "main": "dist/background.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsx build.ts",
+    "dev": "tsx --watch build.ts",
+    "type-check": "tsc --noEmit"
+  },
+  "keywords": [
+    "chrome-extension",
+    "prompts",
+    "local-storage",
+    "typescript"
+  ],
+  "author": "BullPrompt",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/chrome": "^0.0.254",
+    "@types/node": "^20.10.5",
+    "esbuild": "^0.19.8",
+    "tsx": "^4.6.2",
+    "typescript": "^5.3.3"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
