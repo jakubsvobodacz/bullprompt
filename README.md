@@ -1,4 +1,4 @@
-# BullPrompt - Chrome Extension
+# ![Bulldog](./src/icons/icon48.png) BullPrompt
 
 A modern Chrome extension for saving, tagging, searching, and managing text prompts with local storage.
 
